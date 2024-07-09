@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('img\fondo.jpeg') no-repeat center center fixed; /* Imagen de fondo */
+  background: url('img/fondo.jpeg'); /* Imagen de fondo */
   background-size: cover; /* Ajustar la imagen al tamaño de la pantalla */
   color: #ffffff; /* Color de texto primario */
   font-family: 'Arial', sans-serif;
@@ -19,22 +19,12 @@ body {
   --right-section-bg: rgba(255, 255, 255, 0); /* Fondo oscuro para la sección derecha */
 }
 
-/* Contenedor principal */
-.container {
-  margin: auto;
-  width: var(--container-width);
-  padding: 20px;
-  background: var(--color-background);
-  border-radius: var(--border-radius);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
 /* Estilos para el campo de entrada de texto */
 .text-input {
   display: block;
   margin: 20px auto;
   width: 80%;
-  padding: 60px;
+  padding: 20px; /* Reducido para evitar desbordamiento */
   border: 2px solid var(--color-primary);
   border-radius: var(--border-radius);
   font-size: 16px;
@@ -71,7 +61,6 @@ body {
   border-radius: var(--border-radius);
   font-size: 16px;
   cursor: pointer;
-
 }
 
 #btn-encriptar {
@@ -103,15 +92,14 @@ p {
 /* Estilos específicos para la imagen derecha */
 #imgDer {
   width: 50%;
-  margin: 30px 0;
+  margin: 1px 0;
 }
 
 /* Estilos para los elementos de texto dentro de #texto y #texto2 */
 #texto, #texto2 {
-  width: calc(50% - 20px); /* Ancho ajustado de los textareas */
+  width: 90%; /* Ancho ajustado de los textareas */
   margin-bottom: 20px;
   display: block;
-  width: 90%;
   margin: 10px auto;
   padding: 10px;
   border-radius: var(--border-radius);
@@ -122,7 +110,7 @@ p {
 }
 
 #texto {
-  background: var(--color-secondary));
+  background: var(--color-secondary);
   border: none;
   font-size: 16px;
   font-weight: bold;
@@ -144,20 +132,21 @@ p {
 
 /* Estilos para la sección de logo */
 .logo {
-
+  text-align: left;
+  border: none;
 }
 
 /* Estilos para la imagen del logo */
 .logoImg {
-  width: 1%;
+  width: 30px; /* Ajuste del ancho de la imagen del logo */
 }
 
 /* Estilos para el pie de página */
-footer {
+.footer {
   width: 100%;
   text-align: center;
   padding: 10px;
-  background: var(--right-section-bg);
+  background: #0000007d;
   color: var(--color-secondary);
   position: fixed;
   bottom: 0;
@@ -196,23 +185,23 @@ footer {
 /* Estilos responsivos para pantallas pequeñas */
 @media (max-width: 600px) {
   .main-content {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .text-container {
-      width: calc(100% - 20px); /* Ancho ajustado de los textareas para una columna completa */
+    width: calc(100% - 20px); /* Ancho ajustado de los textareas para una columna completa */
   }
 
   textarea {
-      height: 100px; /* Ajuste de altura para pantallas pequeñas */
+    height: 100px; /* Ajuste de altura para pantallas pequeñas */
   }
 
   .buttons {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .action-button {
-      margin: 10px 0;
+    margin: 10px 0;
   }
 }

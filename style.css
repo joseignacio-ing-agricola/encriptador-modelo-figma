@@ -34,7 +34,7 @@ body {
 
 /* Estilos para la sección izquierda del diseño */
 .left {
-  width: 50%;
+  width: 100%;
   float: left;
   margin-top: 70px;
   text-align: left;
@@ -78,7 +78,7 @@ p {
   color: var(--color-primary);
 }
 
-/* Estilos para la sección derecha del diseño */
+/* Estilos base para la sección derecha */
 .right {
   width: 35%;
   float: right;
@@ -89,10 +89,27 @@ p {
   color: var(--color-primary);
 }
 
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .right {
+    width: 100%; /* Cambia el ancho al 100% para ocupar toda la pantalla */
+    float: none; /* Elimina el flotado para que ocupe todo el ancho */
+    padding: 20px; /* Ajusta el padding para un espacio más adecuado en pantallas pequeñas */
+  }
+
+  /* Ajustes específicos para la imagen */
+  #imgDer {
+    width: 80%; /* Ajusta el ancho de la imagen para adaptarse mejor a pantallas pequeñas */
+    margin: 10px auto; /* Centra la imagen y ajusta el margen */
+    display: block; /* Asegura que la imagen sea un bloque para manejar correctamente el margen */
+  }
+}
+
 /* Estilos específicos para la imagen derecha */
 #imgDer {
-  width: 50%;
-  margin: 1px 0;
+  width: 45%; /* Ajusta el ancho al 100% para ocupar todo el contenedor */
+  margin: 10px 0; /* Incrementa el espacio alrededor de la imagen */
+  border-radius: 8px; /* Añade un borde redondeado a la imagen si es apropiado */
 }
 
 /* Estilos para los elementos de texto dentro de #texto y #texto2 */
@@ -138,7 +155,7 @@ p {
 
 /* Estilos para la imagen del logo */
 .logoImg {
-  width: 30px; /* Ajuste del ancho de la imagen del logo */
+  width: auto; /* Ajuste del ancho de la imagen del logo */
 }
 
 /* Estilos para el pie de página */

@@ -2,172 +2,195 @@
 body {
   margin: 0;
   padding: 0;
-  background: var(--color-background, #F3F5FC); /* Usando variable para el color de fondo */
+  background: url('img\fondo.jpeg') no-repeat center center fixed; /* Imagen de fondo */
+  background-size: cover; /* Ajustar la imagen al tamaño de la pantalla */
+  color: #ffffff; /* Color de texto primario */
+  font-family: 'Arial', sans-serif;
 }
 
 /* Definición de variables en :root */
 :root {
-  --color-background: #F3F5FC; /* Variable para el color de fondo */
-  --color-primary: #0A3871; /* Variable para el color primario */
-  --color-secondary: #D8DFE8; /* Variable para el color secundario */
-  --border-radius: 24px; /* Variable para el radio de borde */
-  --container-width: 960px; /* Variable para el ancho del contenedor */
+  --color-primary: #fafafa; /* blanco */
+  --color-secondary: #0040b7; /* azul oscuro */
+  --color-highlight: #eaff00; /* Amarillo brillante */
+  --color-background: rgba(243, 245, 252, 0.8); /* Fondo con transparencia */
+  --border-radius: 24px; /* Radio de borde */
+  --container-width: 960px; /* Ancho del contenedor */
+  --right-section-bg: rgba(255, 255, 255, 0); /* Fondo oscuro para la sección derecha */
 }
 
 /* Contenedor principal */
 .container {
-  margin: auto; /* Centra el contenedor horizontalmente */
+  margin: auto;
   width: var(--container-width);
-  height: 650px;
-  padding: 5px;
+  padding: 20px;
+  background: var(--color-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilos para el campo de entrada de texto */
 .text-input {
-  float: left; /* Flota a la izquierda para alinear con otros elementos */
-  margin-left: 10%;
-  margin-top: 10%;
-  color: var(--color-primary);
+  display: block;
+  margin: 20px auto;
   width: 80%;
-  height: 60%;
-  background: var(--color-background);
-  outline: none;
-  border: none;
-  font-size: 20px;
+  padding: 60px;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  background: var(--color-highlight);
+  color: var(--color-secondary);
 }
 
 /* Estilos para la sección izquierda del diseño */
 .left {
-  float: left; /* Flota a la izquierda */
-  width: 70%;
-  height: 50%;
-  border-radius: var(--border-radius);
-}
+  width: 50%;
+  float: left;
+  margin-top: 70px;
+  text-align: left;
+  height: 200px; /* Altura de las áreas de texto */
+  padding: 10px;
+  font-size: 16px;
+  resize: none; /* No permite cambiar el tamaño */
+ }
 
 /* Estilos para el botón izquierdo */
 .left-button {
-  float: left; /* Flota a la izquierda */
-  width: 70%;
-  height: auto; /* Altura automática según contenido */
-  border-radius: var(--border-radius);
+  width: 50%;
+  float: left;
+  margin-top: 20px;
+  text-align: left;
 }
 
-/* Estilos específicos para el botón de encriptar */
+/* Estilos específicos para los botones */
+#btn-encriptar, #btn-desencriptar {
+  width: 40%;
+  padding: 15px;
+  margin: 10px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
 #btn-encriptar {
-  padding: 24px;
-  width: 30%;
-  height: 60%;
-  background: var(--color-primary);
-  border-radius: var(--border-radius);
-  margin-left: 15%; /* Margen izquierdo */
+  background: var(--color-highlight);
+  color: #000000;
 }
 
-/* Estilos específicos para el botón de desencriptar */
 #btn-desencriptar {
-  padding: 24px;
-  width: 30%;
-  height: 60%;
-  background: var(--color-secondary);
-  border-radius: var(--border-radius);
-  margin-left: 10%; /* Margen izquierdo */
+  background: var(--color-highlight);
+  color: #000;
 }
 
 /* Estilos para párrafos dentro del contenedor */
 p {
-  margin-left: 5%;
+  color: var(--color-primary);
 }
 
 /* Estilos para la sección derecha del diseño */
 .right {
-  float: right; /* Flota a la derecha */
-  text-align: center; /* Alineación centrada del texto */
+  width: 35%;
+  float: right;
+  text-align: center;
+  background: var(--right-section-bg);
   border-radius: var(--border-radius);
-  width: 30%;
-  height: 80%;
+  padding: 40px;
+  color: var(--color-primary);
 }
 
 /* Estilos específicos para la imagen derecha */
 #imgDer {
-  margin-top: 20%;
-  width: 90%;
-  height: auto;
-  /* Posicionamiento absoluto (no es necesario si está dentro de .right) */
-  /* left: 1032px; */
-  /* top: 283px; */
+  width: 50%;
+  margin: 30px 0;
 }
 
 /* Estilos para los elementos de texto dentro de #texto y #texto2 */
 #texto, #texto2 {
-  margin-left: 5%;
-  margin-right: 5%;
+  width: calc(50% - 20px); /* Ancho ajustado de los textareas */
+  margin-bottom: 20px;
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-primary);
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  font-size: 16px;
+}
+
+#texto {
+  background: var(--color-secondary));
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /* Estilos para el botón de copiar */
 #copiar {
-  margin-left: 33%; /* Margen izquierdo */
-  margin-top: 90%; /* Margen superior */
-  display: none; /* Inicialmente oculto */
-  padding: 24px;
-  width: 40%;
-  height: 10%;
-  background: var(--color-secondary);
+  display: block;
+  width: 50%;
+  padding: 20px;
+  margin: 20px auto;
+  border: none;
   border-radius: var(--border-radius);
+  background: var(--color-highlight);
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 /* Estilos para la sección de logo */
 .logo {
-  width: 100%;
-  float: left; /* Flota a la izquierda */
+
 }
 
 /* Estilos para la imagen del logo */
 .logoImg {
-  margin-top: 1%;
-  float: inherit; /* Hereda el float de .logo */
-  margin-left: 5%;
+  width: 1%;
 }
 
-/* Estilos para el título */
-.tittle {
-  float: inherit; /* Hereda el float de .logo */
-  margin-left: 15%;
-}
-
-/* Estilos específicos para el campo de texto pequeño #texto2 */
-#texto2 {
-  float: left; /* Flota a la izquierda */
-  margin-left: 10%;
-  margin-top: 10%;
-  color: var(--color-primary);
-  width: 80%;
-  height: 60%;
-  background: var(--color-background);
-  outline: none;
-  border: none;
-  font-size: 15px;
-}
-
-/* Estilos para títulos de nivel 3 */
-h3 {
-  text-align: center; /* Alineación centrada */
-}
-
-/* Estilos para la imagen de YouTube */
-#imgYt {
-  float: right; /* Flota a la derecha */
-  margin-right: 5%; /* Margen derecho */
-  width: 10%;
-  height: 10%;
-}
-
-/* Estilo para el pie de página */
+/* Estilos para el pie de página */
 footer {
-  color: var(--color-secundario);
- 
-  text-align: center;
-  padding: 10px 0;
   width: 100%;
-  background-color: rgba(25, 194, 183, 0.5);
+  text-align: center;
+  padding: 10px;
+  background: var(--right-section-bg);
+  color: var(--color-secondary);
+  position: fixed;
+  bottom: 0;
+}
+
+/* Estilo para las notificaciones */
+.toast {
+  visibility: hidden; /* Oculta la notificación por defecto */
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  transition: visibility 0s, opacity 0.5s linear; /* Transición para mostrar/ocultar la notificación */
+}
+
+/* Muestra la notificación */
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Estilo específico para el área de texto de salida */
+#output-text {
+  background-size: contain; /* Ajusta el tamaño de la imagen para que quepa dentro del cuadro */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 /* Estilos responsivos para pantallas pequeñas */

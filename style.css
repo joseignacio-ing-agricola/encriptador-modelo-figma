@@ -1,6 +1,6 @@
 /* Estilos generales para el cuerpo de la página */
 body {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   background: url('img/fondo.jpeg'); /* Imagen de fondo */
   background-size: cover; /* Ajustar la imagen al tamaño de la pantalla */
@@ -21,26 +21,27 @@ body {
 
 /* Estilos para el campo de entrada de texto */
 .text-input {
+  float: left;
   display: block;
   margin: 20px auto;
-  width: 80%;
-  padding: 20px; /* Reducido para evitar desbordamiento */
+  width: 35%;
+  padding: 100px; /* Reducido para evitar desbordamiento */
   border: 2px solid var(--color-primary);
   border-radius: var(--border-radius);
-  font-size: 16px;
+  font-size: 3rem;
   background: var(--color-highlight);
   color: var(--color-secondary);
 }
 
 /* Estilos para la sección izquierda del diseño */
 .left {
-  width: 100%;
+  width: 35%;
   float: left;
-  margin-top: 70px;
+  margin-top: 10px;
   text-align: left;
-  height: 200px; /* Altura de las áreas de texto */
-  padding: 10px;
-  font-size: 16px;
+  height: 100px; /* Altura de las áreas de texto */
+  padding: 50px;
+  font-size: 3rem;
   resize: none; /* No permite cambiar el tamaño */
  }
 
@@ -55,11 +56,11 @@ body {
 /* Estilos específicos para los botones */
 #btn-encriptar, #btn-desencriptar {
   width: 40%;
-  padding: 15px;
+  padding: 50px;
   margin: 10px;
   border: none;
   border-radius: var(--border-radius);
-  font-size: 16px;
+  font-size: 3rem;
   cursor: pointer;
 }
 
@@ -80,26 +81,28 @@ p {
 
 /* Estilos base para la sección derecha */
 .right {
-  width: 35%;
+  width: 50%;
   float: right;
   text-align: center;
   background: var(--right-section-bg);
   border-radius: var(--border-radius);
-  padding: 40px;
+  padding: 50px;
+  margin: 10px;
   color: var(--color-primary);
+  font-size: 3rem;
 }
 
 /* Ajustes para pantallas más pequeñas */
 @media (max-width: 768px) {
   .right {
-    width: 100%; /* Cambia el ancho al 100% para ocupar toda la pantalla */
+    width: 50%; /* Cambia el ancho al 50% para ocupar toda la pantalla */
     float: none; /* Elimina el flotado para que ocupe todo el ancho */
-    padding: 20px; /* Ajusta el padding para un espacio más adecuado en pantallas pequeñas */
+    padding: 2px; /* Ajusta el padding para un espacio más adecuado en pantallas pequeñas */
   }
 
   /* Ajustes específicos para la imagen */
   #imgDer {
-    width: 80%; /* Ajusta el ancho de la imagen para adaptarse mejor a pantallas pequeñas */
+    width: 50%; /* Ajusta el ancho de la imagen para adaptarse mejor a pantallas pequeñas */
     margin: 10px auto; /* Centra la imagen y ajusta el margen */
     display: block; /* Asegura que la imagen sea un bloque para manejar correctamente el margen */
   }
@@ -107,14 +110,14 @@ p {
 
 /* Estilos específicos para la imagen derecha */
 #imgDer {
-  width: 45%; /* Ajusta el ancho al 100% para ocupar todo el contenedor */
+  width: 50%; /* Ajusta el ancho al 100% para ocupar todo el contenedor */
   margin: 10px 0; /* Incrementa el espacio alrededor de la imagen */
   border-radius: 8px; /* Añade un borde redondeado a la imagen si es apropiado */
 }
 
 /* Estilos para los elementos de texto dentro de #texto y #texto2 */
 #texto, #texto2 {
-  width: 90%; /* Ancho ajustado de los textareas */
+  width: 100%; /* Ancho ajustado de los textareas */
   margin-bottom: 20px;
   display: block;
   margin: 10px auto;
@@ -123,13 +126,14 @@ p {
   border: 2px solid var(--color-primary);
   background: var(--color-secondary);
   color: var(--color-primary);
-  font-size: 16px;
+  font-size: 3rem;
+  text-align: center;
 }
 
 #texto {
   background: var(--color-secondary);
   border: none;
-  font-size: 16px;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -137,13 +141,13 @@ p {
 #copiar {
   display: block;
   width: 50%;
-  padding: 20px;
+  padding: 50px;
   margin: 20px auto;
   border: none;
   border-radius: var(--border-radius);
   background: var(--color-highlight);
   color: #000;
-  font-size: 16px;
+  font-size: 3rem;
   cursor: pointer;
 }
 
@@ -155,7 +159,7 @@ p {
 
 /* Estilos para la imagen del logo */
 .logoImg {
-  width: auto; /* Ajuste del ancho de la imagen del logo */
+  width: 3.5%; /* Ajuste del ancho de la imagen del logo */
 }
 
 /* Estilos para el pie de página */
